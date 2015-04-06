@@ -1,0 +1,94 @@
+/**
+ *	General stylesheet for Personal Website
+ *	@author Arnaud Weyts <arnaud.weyts@student.odisee.be>
+ *	@version 6-03-2015
+ */
+
+/**---------------------------------------------
+	GENERAL
+----------------------------------------------*/
+
+html {
+	font-size: 62.5%;
+}
+
+* {
+	margin: 0; /* wipe out browser differences for default values */
+	padding: 0; /* wipe out browser differences for default values  */
+	-webkit-box-sizing: border-box; /* use border-box box model everywhere */
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body, #container {
+	height: 100%;
+}
+
+body > #container {
+	height: auto;
+	min-height: 87.3%;
+}
+
+body {
+	font-size: 1.3rem; /* restore font size */
+	font-family: Roboto;
+}
+
+/**---------------------------------------------
+	HEADER
+----------------------------------------------*/
+
+header {
+	height: auto;
+	min-height: 12rem;
+	background-color: #2196F3;
+	box-shadow: 0px 3px 3px #BDBDBD;
+}
+
+header h1 {
+	text-align: center;
+	line-height: 12rem;
+	color: #FFFFFF;
+}
+
+/**---------------------------------------------
+	CONTENT
+----------------------------------------------*/
+
+
+#main {
+	padding-bottom: 5rem;
+}
+
+#main p {
+	font-size: 1.5rem;
+	font-weight: lighter;
+	text-align: center;
+	line-height: 50rem;
+}
+
+#main p a {
+	text-decoration: none;
+	color: #009688;
+}
+
+/**---------------------------------------------
+	FOOTER
+----------------------------------------------*/
+
+footer {
+	background-color: #009688;
+	clear: both;
+	position: relative;
+	z-index: 10;
+	height: 5rem;
+	margin-top: -5rem;
+}
+
+footer p {
+	text-align: center;
+	line-height: 5rem;
+	color: #FFFFFF;
+}

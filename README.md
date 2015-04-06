@@ -1,2 +1,2 @@
-# arnaudweyts.github.io
-Personal Website
+# Personal Website
+Because why not.
