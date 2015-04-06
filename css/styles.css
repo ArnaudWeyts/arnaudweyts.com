@@ -87,8 +87,40 @@ footer {
 	margin-top: -5rem;
 }
 
-footer p {
-	text-align: center;
+footer > p {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	float: left;
 	line-height: 5rem;
 	color: #FFFFFF;
+
+}
+
+#contact {
+	margin: 0 auto;
+	float: right;
+}
+
+footer h4 {
+	color: #FFFFFF;
+	float: left;
+	line-height: 5rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+footer ul {
+	list-style: none;
+	float: left;	
+}
+
+footer ul li {
+	display: inline-block;
+	line-height: 5rem;
+}
+
+footer ul li a {
+	color: #FFFFFF;
+	text-decoration: none;
+	margin: 1.5rem;
 }
