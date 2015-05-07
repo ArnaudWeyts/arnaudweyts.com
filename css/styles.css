@@ -22,18 +22,14 @@ html {
 	box-sizing: border-box;
 }
 
-html, body, #container {
-	height: 100%;
-}
-
-body > #container {
-	height: auto;
-	min-height: 87.3%;
-}
-
 body {
 	font-size: 1.3rem; /* restore font size */
 	font-family: Roboto;
+}
+
+div#wrapper {
+	margin: 0 auto;
+	width: 100%;
 }
 
 /**---------------------------------------------
@@ -41,8 +37,8 @@ body {
 ----------------------------------------------*/
 
 header {
-	height: auto;
-	min-height: 12rem;
+	height: 12rem;
+	position: relative;
 	background-color: #2196F3;
 	box-shadow: 0px 3px 3px #BDBDBD;
 }
@@ -58,69 +54,48 @@ header h1 {
 ----------------------------------------------*/
 
 
-#main {
-	padding-bottom: 5rem;
+div#maincontent {
+	margin: 0 auto;
+	width: 1050px;
 }
 
-#main p {
-	font-size: 1.5rem;
-	font-weight: lighter;
+div#contactbubbles {
+	display: table;
+	margin: 0 auto;
+	font-size: 4rem;
+}
+
+.button	 {
+	color: #FFFFFF;
+	margin: 36px;
+	width: 144px;
+	height: 144px;
+	float: left;
+	line-height: 144px;
 	text-align: center;
-	line-height: 50rem;
+	border-radius: 50%;
+	box-shadow: 0px 3px 8px #BDBDBD;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
 }
 
-#main p a {
-	text-decoration: none;
-	color: #009688;
+.button:nth-of-type(1) {
+	background-color:  #ef6c00;
 }
+
+.button:nth-of-type(2) {
+	background-color:  #039be5;
+}
+
+.button:nth-of-type(3) {
+	background-color:  #689f38;
+}
+
+.button:hover {
+	transform: scale(1.2);
+}
+
 
 /**---------------------------------------------
 	FOOTER
 ----------------------------------------------*/
-
-footer {
-	background-color: #009688;
-	clear: both;
-	position: relative;
-	z-index: 10;
-	height: 5rem;
-	margin-top: -5rem;
-}
-
-footer > p {
-	padding-left: 1rem;
-	padding-right: 1rem;
-	float: left;
-	line-height: 5rem;
-	color: #FFFFFF;
-
-}
-
-#contact {
-	margin: 0 auto;
-	float: right;
-}
-
-footer h4 {
-	color: #FFFFFF;
-	float: left;
-	line-height: 5rem;
-	padding-left: 2rem;
-	padding-right: 2rem;
-}
-
-footer ul {
-	list-style: none;
-	float: left;	
-}
-
-footer ul li {
-	display: inline-block;
-	line-height: 5rem;
-}
-
-footer ul li a {
-	color: #FFFFFF;
-	text-decoration: none;
-	margin: 1.5rem;
-}
