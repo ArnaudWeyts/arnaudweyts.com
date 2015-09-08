@@ -27,9 +27,9 @@ body {
 	font-family: Roboto;
 }
 
-div#wrapper {
+.wrapper {
 	margin: 0 auto;
-	width: 100%;
+	max-width: 96rem;
 }
 
 /**---------------------------------------------
@@ -40,59 +40,28 @@ header {
 	height: 12rem;
 	position: relative;
 	background-color: #2196F3;
-	box-shadow: 0px 3px 3px #BDBDBD;
+	/**box-shadow: 0px 3px 3px #BDBDBD;*/
+	margin-bottom: 2rem;
+	line-height: 12rem;
 }
 
 header h1 {
-	text-align: center;
-	line-height: 12rem;
 	color: #FFFFFF;
-}
-
-/**---------------------------------------------
-	CONTENT
-----------------------------------------------*/
-
-
-div#maincontent {
-	margin: 0 auto;
-}
-
-div#contactbubbles {
-	display: table;
-	margin: 0 auto;
-	font-size: 4rem;
-}
-
-.button	 {
-	color: #FFFFFF;
-	margin: 36px;
-	width: 144px;
-	height: 144px;
 	float: left;
-	line-height: 144px;
-	text-align: center;
-	border-radius: 50%;
-	box-shadow: 0px 3px 8px #BDBDBD;
+	font-size: 3.5rem;
+}
+
+#headerlinks {
+	float: right;
+	font-size: 3.5rem;
+}
+
+#headerlinks a {
 	text-decoration: none;
-	transition: all 0.3s ease-in-out;
+	color: #FFFFFF;
+	margin: 0 0.5rem;
 }
 
-.button:nth-of-type(1) {
-	background-color:  #ef6c00;
-}
-
-.button:nth-of-type(2) {
-	background-color:  #039be5;
-}
-
-.button:nth-of-type(3) {
-	background-color:  #689f38;
-}
-
-.button:hover {
-	transform: scale(1.2);
-}
 
 
 /**---------------------------------------------

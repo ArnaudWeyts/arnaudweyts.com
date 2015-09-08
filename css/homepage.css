@@ -1,0 +1,50 @@
+/**
+ * Stylesheet for the homepage
+ *	General stylesheet for Personal Website
+ *	@author Arnaud Weyts <arnaud.weyts@student.odisee.be>
+ *	@version 7-09-2015
+ */
+
+/**---------------------------------------------
+	GENERAL
+----------------------------------------------*/
+
+/**---------------------------------------------
+	CONTENT
+----------------------------------------------*/
+
+
+#introduction {
+	width: 100%
+}
+
+h2 {
+	margin-bottom: 2rem;
+	font-size: 2.5rem;
+	color: #2196F3;
+}
+
+#iss {
+	width: 100%;
+	margin-bottom: 2rem
+}
+
+p {
+	font-size: 1.7rem;
+	line-height: 2.5rem;
+	margin-bottom: 2rem
+}
+
+#introduction p a {
+	color: #2196F3;
+	text-decoration: none;
+}
+
+#skills ul {
+	list-style: none;
+	font-size: 1.6rem;
+}
+
+#skills ul li {
+	color: #2196F3;
+}
