@@ -16,9 +16,9 @@ body {
 	height: auto;
 	z-index: -100;
 	-webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url("404/poster.png") no repeat;
-    background-size: cover;
+	transform: translateX(-50%) translateY(-50%);
+	background: url("404/poster.png") no repeat;
+	background-size: cover;
 }
 
 svg {
@@ -32,25 +32,50 @@ p {
 }
 
 p:first-of-type {
-	margin-top: 15rem;
+	
 	font-size: 5rem;
 }
 
-a {
-	display: block;
-	border-radius: 2.5px;
-	background-color: #FFFFFF;
-	border: 2px solid #FFFFFF;
-	text-decoration: none;
-	color: #000000;
-	margin: 0 auto;
-	text-align: center;
+.button > paper-ripple {
+	border-radius: 2px;
+	overflow: hidden;
+	color: #646464;
 }
 
-#backbutton {	
-	font-size: 2rem;
-	padding: 1.5rem;
-	width: 10rem;
+.center {
+	text-align: center;
+	
+}
+
+.button {
+	display: block;
+	position: relative;
+	border-radius: 2px;
+	height: 5rem;
+	line-height: 5rem;
+	background-color: #fff;
+  	color: #646464;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1.7rem;
+	width: 12rem;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-touch-callout: none;
+}
+
+.button.raised {
+	transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 0.2s;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.button.raised:active {
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+	transition-delay: 0s;
 }
 
 #controls {
@@ -59,11 +84,10 @@ a {
 }
 
 .vidbutton {
-	border-radius: 5rem;
 	margin-left: 1rem;
 	margin-right: 1rem;
 	margin-top: 10rem;
-	font-size: 4rem;
-	width: 5rem;
+	font-size: 6rem;
 	float: left;
+	color: #FFFFFF;
 }

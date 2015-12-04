@@ -6,6 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="404/404.css">
 	<link rel="shortcut icon" href="//weyts.xyz/favicon.ico" >
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="fonts/font-awesome-4.5.0/css/font-awesome.min.css">
+	<link rel="import" href="https://www.polymer-project.org/0.5/components/paper-ripple/paper-ripple.html">
 </head>
 <body>
 	<svg style="width:254px;height:254px" viewBox="0 0 24 24">
@@ -16,25 +18,39 @@
 		<source src="404/meme.ogg" type="video/ogg">
 	</video>
 	<p>Look at this 404</p>
-	<a id="backbutton" href="https://weyts.xyz">Go back</a>
+	<div class="button raised">
+      <div class="center" fit>GO BACK</div>
+      <paper-ripple fit></paper-ripple>
+    </div>
 	<div id="controls">
-		<a onclick="toggleVid()" href=javascript:void(0) class="vidbutton">&#9658;</a>
-		<a onclick="toggleSound()" href=javascript:void(0) class="vidbutton">&#x1f50a;</a>
+		<a id="toggleVid" onclick="toggleVid()" href=javascript:void(0) class="vidbutton"><i class="fa fa-pause-circle"></i></a>
+		<a id="toggleSound" onclick="toggleSound()" href=javascript:void(0) class="vidbutton"><i class="fa fa-volume-off"></i></a>
 	</div>
 	<script>
 		var vid = document.getElementById('bg-vid');
+		var toggleVidButton = document.getElementById('toggleVid');
+		var toggleSoundButton = document.getElementById('toggleSound');
 
 		function toggleVid() {
 			if (vid.paused) {
+				toggleVidButton.firstChild.setAttribute('class', 'fa fa-pause-circle');
 				vid.play();
 			}
 			else {
+				toggleVidButton.firstChild.setAttribute('class', 'fa fa-play-circle');
 				vid.pause();
 			}
 		};
 
 		function toggleSound() {
-			vid.muted = !vid.muted;
+			if (vid.muted == true) {
+				toggleSoundButton.firstChild.setAttribute('class', 'fa fa-volume-up');
+				vid.muted = false;
+			}
+			else {
+				toggleSoundButton.firstChild.setAttribute('class', 'fa fa-volume-off');
+				vid.muted = true;
+			}
 		};
 	</script>
 </body>
