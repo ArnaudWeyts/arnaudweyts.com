@@ -36,6 +36,10 @@ p:first-of-type {
 	font-size: 5rem;
 }
 
+/*
+* Material design buttons ->>>
+* http://codepen.io/iraycd/pen/dHrxv
+*/
 .button > paper-ripple {
 	border-radius: 2px;
 	overflow: hidden;
