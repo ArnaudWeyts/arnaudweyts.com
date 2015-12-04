@@ -57,6 +57,7 @@ p:first-of-type {
 	line-height: 5rem;
 	background-color: #2196F3;
   	color: #fff;
+  	text-decoration: none;
 	margin: 0 auto;
 	text-align: center;
 	font-size: 1.7rem;
