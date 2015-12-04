@@ -18,10 +18,10 @@
 		<source src="404/meme.ogg" type="video/ogg">
 	</video>
 	<p>Look at this 404</p>
-	<div class="button raised">
+	<a id="goBack"  href=javascript:void(0) onclick="goBack()" class="button raised">
       <div class="center" fit>GO BACK</div>
       <paper-ripple fit></paper-ripple>
-    </div>
+    </a>
 	<div id="controls">
 		<a id="toggleVid" onclick="toggleVid()" href=javascript:void(0) class="vidbutton"><i class="fa fa-pause-circle"></i></a>
 		<a id="toggleSound" onclick="toggleSound()" href=javascript:void(0) class="vidbutton"><i class="fa fa-volume-off"></i></a>
@@ -30,6 +30,12 @@
 		var vid = document.getElementById('bg-vid');
 		var toggleVidButton = document.getElementById('toggleVid');
 		var toggleSoundButton = document.getElementById('toggleSound');
+
+		function goBack() {
+			setTimeout(function() {
+				window.location.assign('https://weyts.xyz');
+			}, 200)
+		};
 
 		function toggleVid() {
 			if (vid.paused) {
