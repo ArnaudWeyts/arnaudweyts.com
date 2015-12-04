@@ -32,7 +32,6 @@ p {
 }
 
 p:first-of-type {
-	
 	font-size: 5rem;
 }
 
@@ -94,4 +93,19 @@ p:first-of-type {
 	font-size: 6rem;
 	float: left;
 	color: #FFFFFF;
+}
+
+#inspiredby {
+	float: none;
+	clear: both;
+	font-size: 1.4rem;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	margin-left: -1rem;
+}
+
+#inspiredby a {
+	text-decoration: none;
+	color: #2196F3;
 }
