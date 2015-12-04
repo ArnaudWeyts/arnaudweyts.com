@@ -17,7 +17,7 @@
 		<source src="404/meme.mp4" type="video/mp4">
 		<source src="404/meme.ogg" type="video/ogg">
 	</video>
-	<p>Look at this 404</p>
+	<p id="look">Look at this 404</p>
 	<a id="goBack"  href=javascript:void(0) onclick="goBack()" class="button raised">
       <div class="center" fit>GO BACK</div>
       <paper-ripple fit></paper-ripple>
@@ -26,7 +26,9 @@
 		<a id="toggleVid" onclick="toggleVid()" href=javascript:void(0) class="vidbutton"><i class="fa fa-pause-circle"></i></a>
 		<a id="toggleSound" onclick="toggleSound()" href=javascript:void(0) class="vidbutton"><i class="fa fa-volume-off"></i></a>
 	</div>
-	<p id="inspiredby">Inspired by: <a href="https://haroen.me/404">haroen.me</a></p>
+	<footer id="inspiredby">
+		<p>Inspired by: <a href="https://haroen.me/404">haroen.me</a></p>
+	</footer>
 	<script>
 		var vid = document.getElementById('bg-vid');
 		var toggleVidButton = document.getElementById('toggleVid');

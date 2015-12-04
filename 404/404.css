@@ -1,9 +1,13 @@
 html {
 	font-size: 62.5%;
+	height: 100%;
+	position: relative;
+	min-height: 100%;
 }
 
 body {
 	font-family: Roboto;
+	margin: 0 0 2rem;
 }
 
 #bg-vid {
@@ -31,7 +35,7 @@ p {
 	color: #FFFFFF;
 }
 
-p:first-of-type {
+p#look {
 	font-size: 5rem;
 }
 
@@ -95,14 +99,20 @@ p:first-of-type {
 	color: #FFFFFF;
 }
 
+footer {
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4rem;
+    width: 100%;
+}
+
 #inspiredby {
 	float: none;
 	clear: both;
 	font-size: 1.4rem;
-	position: fixed;
-	bottom: 0;
 	width: 100%;
-	margin-left: -1rem;
+
 }
 
 #inspiredby a {
