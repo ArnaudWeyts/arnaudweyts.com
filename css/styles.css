@@ -66,5 +66,23 @@ header h1 {
 
 
 /**---------------------------------------------
-	FOOTER
+	MEDIAQUERIES
 ----------------------------------------------*/
+
+@media (max-width: 470px) {
+	header {
+		text-align: center;
+		height: auto;
+		line-height: 8rem;
+	}
+
+	header h1 {
+		float: none;
+		clear: both;
+	}
+
+	#headerlinks {
+		float: none;
+		clear: both;
+	}
+}
