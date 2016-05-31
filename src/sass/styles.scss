@@ -1,0 +1,79 @@
+
+@import '../../node_modules/font-awesome/scss/font-awesome.scss';
+@import 'colors';
+@import '../../node_modules/material-design-lite/src/material-design-lite';
+
+// general styles
+.page-content {
+	margin: 0 2%;
+}
+.align-icon {
+	margin: 10px;
+}
+.indent-left {
+	margin-left: 16px;
+}
+.center-text {
+	text-align: center;
+}
+.footer {
+	margin-top: 20px;
+}
+
+.banner {
+	height: 350px;
+	display: inline-block;
+	width: 100%;
+	background-image: url("../img/banner.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.welcome-card {
+	margin: 50px 16px;
+}
+.skills {
+	list-style: none;
+}
+.skill {
+	display: inline-block;
+	width: 200px;
+}
+.portfolio-card__title {
+	padding: 0;
+	color: #fff;
+	min-height: 200px;
+}
+@for $i from 1 through 3 {
+	.portfolio-card__title-#{$i} {
+		background: url("../img/portfolio/#{$i}.png") center / cover
+	}
+}
+.portfolio-card__title--bottom {
+	vertical-align: middle;
+	line-height: 130px;
+	height: 80px;
+	padding: 16px;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0));
+	width: 100%;
+}
+
+/*@keyframes stroke {
+  	to {
+    	stroke-dashoffset: 755;
+  	}
+}
+.stroke {
+	stroke-dasharray: 1000;
+  	stroke-dashoffset: 1000;
+  	/*animation: stroke 3s linear forwards;
+  	animation-fill-mode: both;
+}*/
+
+
+// media queries
+@media(max-width: 700px) {
+	.welcome-card {
+		margin: 50px auto;
+		width: 90%;
+	}
+}
