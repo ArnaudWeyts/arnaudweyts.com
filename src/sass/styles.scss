@@ -32,11 +32,11 @@
 	margin: 50px 16px;
 }
 .skills {
-	list-style: none;
+	margin: 0 auto;
 }
 .skill {
+	width: 150px;
 	display: inline-block;
-	width: 200px;
 }
 .portfolio-card__title {
 	padding: 0;
@@ -45,7 +45,7 @@
 }
 @for $i from 1 through 3 {
 	.portfolio-card__title-#{$i} {
-		background: url("../img/portfolio/#{$i}.png") center / cover
+		background: url("../img/portfolio/#{$i}.jpg") center / cover
 	}
 }
 .portfolio-card__title--bottom {
