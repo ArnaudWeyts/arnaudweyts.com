@@ -25,5 +25,6 @@ function clearAll() {
   }
 }
 
-// clear all intervals anyways, because apparently they keep running on forever note: this is really s
+// clear all intervals anyways, because apparently they keep running on forever
+// btw this is really shitty
 setTimeout(clearAll, 2500);
