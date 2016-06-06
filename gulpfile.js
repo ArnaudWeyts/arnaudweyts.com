@@ -72,7 +72,7 @@ gulp.task("browser-sync", () => {
 });
 
 gulp.task("copy", function () {
-    gulp.src("./node_modules/font-awesome/fonts/*")
+    gulp.src("./src//fonts/*")
     .pipe(gulp.dest("./assets/fonts"))
 });
 
