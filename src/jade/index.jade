@@ -18,34 +18,27 @@ html(lang="en")
           span.mdl-layout-title Arnaud Weyts
           .mdl-layout-spacer
           nav.mdl-navigation.mdl-layout--large-screen-only
-            a.mdl-navigation__link(href="https://github.com/arnaudweyts")
-              i.fa.fa-github.align-icon(area-hidden="true")
-              | Github
-             a.mdl-navigation__link(href="https://linkedin.com/in/arnaudweyts")
-              i.fa.fa-linkedin-square.align-icon(area-hidden="true")
-              | Linkedin
-            a.mdl-navigation__link(href="https://twitter.com/hardyparter")
-              i.fa.fa-twitter.align-icon(area-hidden="true")
-              | Twitter
-            a.mdl-navigation__link(href="mailto:hello@weyts.xyz")
-              i.fa.fa-envelope-o.align-icon(area-hidden="true")
-              | Mail
+            a.mdl-navigation__link(href="#home")
+              | Home
+            a.mdl-navigation__link(href="#skills")
+              | Skills
+            a.mdl-navigation__link(href="#contact")
+              | Contact
+            a.mdl-navigation__link(href="#portfolio")
+              | Portfolio
       .mdl-layout__drawer
         span.mdl-layout-title Arnaud Weyts
-        nav.mdl-navigation
-          a.mdl-navigation__link(href="https://github.com/arnaudweyts")
-            i.fa.fa-github.align-icon(area-hidden="true")
-            | Github
-           a.mdl-navigation__link(href="https://linkedin.com/in/arnaudweyts")
-            i.fa.fa-linkedin-square.align-icon(area-hidden="true")
-            | Linkedin
-          a.mdl-navigation__link(href="https://twitter.com/hardyparter")
-            i.fa.fa-twitter.align-icon(area-hidden="true")
-            | Twitter
-          a.mdl-navigation__link(href="mailto:hello@weyts.xyz")
-            i.fa.fa-envelope-o.align-icon(area-hidden="true")
-            | Mail
+        nav.mdl-navigation.mdl-layout--large-screen-only
+            a.mdl-navigation__link(href="#home")
+              | Home
+            a.mdl-navigation__link(href="#skills")
+              | Skills
+            a.mdl-navigation__link(href="#contact")
+              | Contact
+             a.mdl-navigation__link(href="#portfolio")
+              | Portfolio
       main.mdl-layout__content
+        span#home
         .banner
           .page-content
             .welcome-card.mdl-card.mdl-shadow--2dp
@@ -57,6 +50,7 @@ html(lang="en")
                 | Feel free to look around this website and leave feedback.
         .page-content
           .skills
+            span#skills
             h3.indent-left Skills
             .skills.center-text
               h4 Programming
@@ -131,7 +125,32 @@ html(lang="en")
                     a 40 40 0 0 1 0 80\
                     a 40 40 0 0 1 0 -80')
                     text#count(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') Italian
+          .contact
+            span#contact
+            h3.indent-left Contact
+            ul.contactlist.center-text
+              li.contactitem
+                a.mdl-navigation__link(href="https://github.com/arnaudweyts")
+                  i.fa.fa-github.align-icon(area-hidden="true")
+                  | Github
+              li.contactitem
+                a.mdl-navigation__link(href="https://codepen.io/ArnaudWeyts")
+                  i.fa.fa-codepen.align-icon(area-hidden="true")
+                  | Codepen
+              li.contactitem
+                a.mdl-navigation__link(href="https://linkedin.com/in/arnaudweyts")
+                  i.fa.fa-linkedin-square.align-icon(area-hidden="true")
+                  | Linkedin
+              li.contactitem
+                a.mdl-navigation__link(href="https://twitter.com/hardyparter")
+                  i.fa.fa-twitter.align-icon(area-hidden="true")
+                  | Twitter
+              li.contactitem
+                a.mdl-navigation__link(href="mailto:hello@weyts.xyz")
+                  i.fa.fa-envelope-o.align-icon(area-hidden="true")
+                  | Mail
           .portfolio
+            span#portfolio
             h3.indent-left Portfolio
             .mdl-grid
               .mdl-cell.mdl-cell--4-col.mdl-card.mdl-shadow--2dp.portfolio-card
