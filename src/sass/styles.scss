@@ -16,10 +16,16 @@
 .center-text {
 	text-align: center;
 }
+.no-linkstyle {
+	text-decoration: none;
+}
 .footer {
 	margin-top: 20px;
 }
 
+.header-title {
+	color: #FFF;
+}
 .banner {
 	height: 350px;
 	display: inline-block;
@@ -31,6 +37,17 @@
 .welcome-card {
 	margin: 50px 16px;
 }
+.contact, .skills {
+	padding: 20px;
+	margin: 20px -3%;
+}
+.contact {
+	color: #FFF;
+	background-color: unquote("rgb(#{$color-primary})");
+}
+.title {
+	margin: 40px;
+}
 .contactlist {
 	margin: 100px 0;
 	list-style: none;
@@ -39,6 +56,9 @@
 .contactitem {
 	margin: 0 20px;
 	display: inline-block;
+}
+.contact-link {
+	color: #FFF;
 }
 .skills {
 	margin: 0 auto;

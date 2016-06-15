@@ -15,7 +15,8 @@ html(lang="en")
     .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
       header.mdl-layout__header
         .mdl-layout__header-row
-          span.mdl-layout-title Arnaud Weyts
+          span.mdl-layout-title
+            a.no-linkstyle.header-title(href="#home") Arnaud Weyts
           .mdl-layout-spacer
           nav.mdl-navigation.mdl-layout--large-screen-only
             a.mdl-navigation__link(href="#home")
@@ -49,11 +50,10 @@ html(lang="en")
                 | My main interests are Web developement (duh) &amp; space exploration.
                 | Feel free to look around this website and leave feedback.
         .page-content
-          .skills
-            span#skills
-            h3.indent-left Skills
-            .skills.center-text
-              h4 Programming
+          span#skills
+          .skills.center-text
+            h3.title Skills
+            .skill-group
               .skill
                 svg(viewbox='0 0 100 100')
                   circle(cx='50', cy='50', r='45', fill='none')
@@ -89,7 +89,7 @@ html(lang="en")
                   a 40 40 0 0 1 0 80\
                   a 40 40 0 0 1 0 -80')
                   text#count(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') Linux
-              h4 Languages
+            .skill-group
               .skill
                 svg(viewbox='0 0 100 100')
                   circle(cx='50', cy='50', r='45', fill='none')
@@ -125,33 +125,33 @@ html(lang="en")
                     a 40 40 0 0 1 0 80\
                     a 40 40 0 0 1 0 -80')
                     text#count(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') Italian
-          .contact
-            span#contact
-            h3.indent-left Contact
-            ul.contactlist.center-text
+          span#contact
+          .contact.center-text
+            h3.title Contact
+            ul.contactlist
               li.contactitem
-                a.mdl-navigation__link(href="https://github.com/arnaudweyts")
+                a.contact-link(href="https://github.com/arnaudweyts")
                   i.icon-github.align-icon
                   | Github
               li.contactitem
-                a.mdl-navigation__link(href="https://codepen.io/ArnaudWeyts")
+                a.contact-link(href="https://codepen.io/ArnaudWeyts")
                   i.icon-codepen.align-icon(area-hidden="true")
                   | Codepen
               li.contactitem
-                a.mdl-navigation__link(href="https://linkedin.com/in/arnaudweyts")
+                a.contact-link(href="https://linkedin.com/in/arnaudweyts")
                   i.icon-linkedin.align-icon(area-hidden="true")
                   | Linkedin
               li.contactitem
-                a.mdl-navigation__link(href="https://twitter.com/hardyparter")
+                a.contact-link(href="https://twitter.com/hardyparter")
                   i.icon-twitter.align-icon(area-hidden="true")
                   | Twitter
               li.contactitem
-                a.mdl-navigation__link(href="mailto:hello@weyts.xyz")
+                a.contact-link(href="mailto:hello@weyts.xyz")
                   i.icon-envelope.align-icon(area-hidden="true")
                   | Mail
+          span#portfolio
           .portfolio
-            span#portfolio
-            h3.indent-left Portfolio
+            h3.center-text.title Portfolio
             .mdl-grid
               .mdl-cell.mdl-cell--4-col.mdl-card.mdl-shadow--2dp.portfolio-card
                 .mdl-card__title.portfolio-card__title.portfolio-card__title-3
