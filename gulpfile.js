@@ -9,6 +9,7 @@ gutil = require("gulp-util"),
 jade = require("gulp-jade"),
 sass = require("gulp-sass"),
 autoprefixer = require("gulp-autoprefixer"),
+purify = require("gulp-purifycss"),
 cssnano = require("gulp-cssnano"),
 imagemin = require("gulp-imagemin"),
 concat = require("gulp-concat"),
@@ -32,6 +33,7 @@ gulp.task("sass", function () {
         browsers: [">1%"],
         cascade: false
     }))
+    .pipe(purify(['./assets/js/**/*.js', './*.html']))
     .pipe(cssnano())
     .pipe(gulp.dest("./assets/css"))
     .pipe(browserSync.stream())
@@ -82,5 +84,5 @@ gulp.task("watch", function () {
     gulp.watch("./src/js/**/*.js", ["scripts"]).on("change", browserSync.reload);
 });
 
-gulp.task("default", ["watch", "jade", "copy", "sass", "scripts", "browser-sync"]);
+gulp.task("default", ["watch", "jade", "copy", "scripts", "sass", "browser-sync"]);
 
