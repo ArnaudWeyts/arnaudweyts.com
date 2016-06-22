@@ -16,33 +16,36 @@ concat = require("gulp-concat"),
 uglify = require("gulp-uglify"),
 browserSync = require("browser-sync").create();
 
+var SRC = "./src";
+var DEST = "./_site";
+
 gulp.task("jade", function() {
     var YOUR_LOCALS = {};
 
-    gulp.src("./src/jade/*.jade")
+    gulp.src(SRC + "/jade/*.jade")
     .pipe(jade({
         locals: YOUR_LOCALS
     }))
-    .pipe(gulp.dest("./"))
+    .pipe(gulp.dest(DEST))
 });
 
 gulp.task("sass", function () {
-    return gulp.src("./src/sass/**/styles.scss")
+    return gulp.src(SRC + "/sass/**/styles.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(autoprefixer({
         browsers: [">1%"],
         cascade: false
     }))
-    .pipe(purify(['./assets/js/**/*.js', './*.html']))
+    .pipe(purify([DEST + "/assets/js/**/*.js", DEST + "/*.html"]))
     .pipe(cssnano())
-    .pipe(gulp.dest("./assets/css"))
+    .pipe(gulp.dest(DEST + "/assets/css/styles.min.css"))
     .pipe(browserSync.stream())
 });
 
 gulp.task("scripts", function() {
     // set up the browserify instance on a task basis
     var b = browserify({
-        entries: "./src/js/scripts.js",
+        entries: SRC + "/js/scripts.js",
         debug: true
     });
 
@@ -54,19 +57,19 @@ gulp.task("scripts", function() {
         .pipe(uglify())
         .on("error", gutil.log)
     .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest("./assets/js/"));
+    .pipe(gulp.dest(DEST + "/assets/js/main.min.js"));
 });
 
 gulp.task("images", function() {
-    return gulp.src("./src/img/**/*", {base: "./src/img"})
+    return gulp.src(SRC + "/img/**/*", {base: SRC + "/img"})
     .pipe(imagemin())
-    .pipe(gulp.dest("./assets/img/"))
+    .pipe(gulp.dest(DEST + "/assets/img/"))
 });
 
 gulp.task("browser-sync", () => {
     browserSync.init({
         server: {
-            baseDir: "./",
+            baseDir: DEST,
             index: "index.html"
         },
         notify: false
@@ -74,15 +77,16 @@ gulp.task("browser-sync", () => {
 });
 
 gulp.task("copy", function () {
-    gulp.src("./src//fonts/*")
-    .pipe(gulp.dest("./assets/fonts"))
+    gulp.src(SRC + "/fonts/*")
+    .pipe(gulp.dest(DEST + "/assets/fonts"))
 });
 
 gulp.task("watch", function () {
-    gulp.watch("./src/jade/**/*.jade", ["jade"]).on("change", browserSync.reload);
-    gulp.watch("./src/sass/**/*.scss", ["sass"]).on("change", browserSync.reload);
-    gulp.watch("./src/js/**/*.js", ["scripts"]).on("change", browserSync.reload);
+    gulp.watch(SRC + "/jade/**/*.jade", ["jade"]).on("change", browserSync.reload);
+    gulp.watch(SRC + "/sass/**/*.scss", ["sass"]).on("change", browserSync.reload);
+    gulp.watch(SRC + "/js/**/*.js", ["scripts"]).on("change", browserSync.reload);
 });
 
 gulp.task("default", ["watch", "jade", "copy", "scripts", "sass", "browser-sync"]);
+gulp.task("compile", ["jade", "copy", "scripts", "sass"]);
 
