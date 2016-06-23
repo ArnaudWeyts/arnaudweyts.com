@@ -1,6 +1,7 @@
 "use strict";
 
 var gulp = require("gulp"),
+rename = require("gulp-rename"),
 browserify = require("browserify"),
 source = require("vinyl-source-stream"),
 buffer = require("vinyl-buffer"),
@@ -38,7 +39,10 @@ gulp.task("sass", function () {
     }))
     .pipe(purify([DEST + "/assets/js/**/*.js", DEST + "/*.html"]))
     .pipe(cssnano())
-    .pipe(gulp.dest(DEST + "/assets/css/styles.min.css"))
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest(DEST + "/assets/css/"))
     .pipe(browserSync.stream())
 });
 
@@ -51,13 +55,16 @@ gulp.task("scripts", function() {
 
     return b.bundle()
     .pipe(source("main.js"))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
         // Add transformation tasks to the pipeline here.
         .pipe(uglify())
         .on("error", gutil.log)
     .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(DEST + "/assets/js/main.min.js"));
+    .pipe(gulp.dest(DEST + "/assets/js/"));
 });
 
 gulp.task("images", function() {
@@ -79,6 +86,10 @@ gulp.task("browser-sync", () => {
 gulp.task("copy", function () {
     gulp.src(SRC + "/fonts/*")
     .pipe(gulp.dest(DEST + "/assets/fonts"))
+    gulp.src(SRC + "google*.html")
+    .pipe(gulp.dest(DEST))
+    gulp.src(SRC + "/favicons/*")
+    .pipe(gulp.dest(DEST));
 });
 
 gulp.task("watch", function () {
@@ -88,5 +99,5 @@ gulp.task("watch", function () {
 });
 
 gulp.task("default", ["watch", "jade", "copy", "scripts", "sass", "browser-sync"]);
-gulp.task("compile", ["jade", "copy", "scripts", "sass"]);
+gulp.task("compile", ["jade", "copy", "scripts", "sass", "images"]);
 
