@@ -13,6 +13,7 @@ autoprefixer = require("gulp-autoprefixer"),
 purify = require("gulp-purifycss"),
 cssnano = require("gulp-cssnano"),
 imagemin = require("gulp-imagemin"),
+favicons = require("gulp-favicons"),
 concat = require("gulp-concat"),
 uglify = require("gulp-uglify"),
 browserSync = require("browser-sync").create();
@@ -67,6 +68,26 @@ gulp.task("scripts", function() {
     .pipe(gulp.dest(DEST + "/assets/js/"));
 });
 
+gulp.task("favicons", function () {
+    gulp.src(SRC + "/img/logo.png").pipe(favicons({
+        appName: "Arnaud Weyts",
+        appDescription: "This is my personal website",
+        developerName: "Arnaud Weyts",
+        developerURL: "http://weyts.xyz/",
+        background: "#020307",
+        path: DEST + "/favicons/",
+        url: "http://weyts.xyz/",
+        display: "standalone",
+        orientation: "portrait",
+        version: 1.0,
+        logging: false,
+        online: false,
+        html: DEST + "index.html",
+        pipeHTML: true,
+        replace: true
+    })).pipe(gulp.dest("./"));
+});
+
 gulp.task("images", function() {
     return gulp.src(SRC + "/img/**/*", {base: SRC + "/img"})
     .pipe(imagemin())
@@ -88,8 +109,8 @@ gulp.task("copy", function () {
     .pipe(gulp.dest(DEST + "/assets/fonts"))
     gulp.src(SRC + "google*.html")
     .pipe(gulp.dest(DEST))
-    gulp.src(SRC + "/favicons/*")
-    .pipe(gulp.dest(DEST));
+    //gulp.src(SRC + "/favicons/*")
+    //.pipe(gulp.dest(DEST));
 });
 
 gulp.task("watch", function () {
