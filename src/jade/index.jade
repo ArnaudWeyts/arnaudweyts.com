@@ -9,36 +9,24 @@ html(lang="en")
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="shortcut icon", href="favicon.ico")
-    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet", href="assets/css/styles.min.css")
   body
-    .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
-      header.mdl-layout__header
-        .mdl-layout__header-row
-          span.mdl-layout-title
-            a.no-linkstyle.header-title(href="#") Arnaud Weyts
-          .mdl-layout-spacer
-          nav.mdl-navigation.mdl-layout--large-screen-only
-            a.mdl-navigation__link(href="https://blog.weyts.xyz")
-              | Blog
-      .mdl-layout__drawer
-        span.mdl-layout-title Arnaud Weyts
-        nav.mdl-navigation
-            a.mdl-navigation__link(href="https://blog.weyts.xyz")
-              | Blog
-      main.mdl-layout__content
-        span#home
+      header.site-header
+        h1.site-header--title
+          a.no-linkstyle.site-header--logo(href="#") Arnaud Weyts
+        nav.site-header--nav
+          a.nav-link(href="https://blog.weyts.xyz")
+            | Blog
+      div
         .banner
-          .page-content
-            .welcome-card.mdl-card.mdl-shadow--2dp
-              .mdl-card__title
-                h2.mdl-card__title-text Who's this guy?
-              .mdl-card__supporting-text
+          .page-content.container-card
+            .card.welcome-card
+              h2.card-title Who's this guy?
+              p.card-content
                 | Hey you! I'm Arnaud Weyts, a 19 year old IT student in Ghent, Belgium.
                 | My main interests are Web developement (duh) &amp; space exploration.
                 | Feel free to look around this website and leave feedback.
         .page-content
-          span#skills
           .skills.center-text
             h3.title Skills
             .skill-group
@@ -113,7 +101,6 @@ html(lang="en")
                     a 40 40 0 0 1 0 80\
                     a 40 40 0 0 1 0 -80')
                     text#count(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') Italian
-          span#contact
           .contact.center-text
             h3.title Contact
             ul.contactlist
@@ -140,49 +127,46 @@ html(lang="en")
           span#portfolio
           .portfolio
             h3.center-text.title Portfolio
-            .mdl-grid
-              .mdl-cell.mdl-cell--4-col.mdl-card.mdl-shadow--2dp.portfolio-card
-                .mdl-card__title.portfolio-card__title.portfolio-card__title-3
-                  h2.mdl-card__title-text.portfolio-card__title--bottom College project
-                .mdl-card__supporting-text.mdl-card--expand
-                  | A Laravel project, to create a website
-                  | of economic, social or commercial value. Created with Material Design Lite.
-                  | Warning: this app is hosted in a test environment and might take a while to load the
-                  | the first time.
-                .mdl-card__actions.mdl-card--border.center-text
-                  a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href="http://floating-shelf-62197.herokuapp.com")
+              h4 College project
+              p
+                | A Laravel project, to create a website
+                | of economic, social or commercial value. Created with Material Design Lite.
+                | Warning: this app is hosted in a test environment and might take a while to load the
+                | the first time.
+                ul
+                  li
+                    a(href="http://floating-shelf-62197.herokuapp.com")
+                      | Visit website
+                  li
+                    a(href="https://github.com/ArnaudWeyts/showtime")
+                      | View on github
+              h4 College project
+              p
+                | This is one of my first college projects.
+                | The objective was to recreate a wix website in pure html and css.
+                | Hosted on GitHub pages.
+                ul
+                  li
+                    a(href="https://weyts.xyz/Webtechnieken-Project-2")
                     | Visit website
-                  a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href="https://github.com/ArnaudWeyts/showtime")
+                  li
+                    a(href="https://github.com/ArnaudWeyts/Webtechnieken-Project-2")
                     | View on github
-              .mdl-cell.mdl-cell--4-col.mdl-card.mdl-shadow--2dp.portfolio-card
-                .mdl-card__title.portfolio-card__title.portfolio-card__title-2
-                  h2.mdl-card__title-text.portfolio-card__title--bottom College project
-                .mdl-card__supporting-text.mdl-card--expand
-                  | This is one of my first college projects.
-                  | The objective was to recreate a wix website in pure html and css.
-                  | Hosted on GitHub pages.
-                .mdl-card__actions.mdl-card--border.center-text
-                  a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href="https://weyts.xyz/Webtechnieken-Project-2")
-                    | Visit website
-                  a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href="https://github.com/ArnaudWeyts/Webtechnieken-Project-2")
-                    | View on github
-              .mdl-cell.mdl-cell--4-col.mdl-card.mdl-shadow--2dp.portfolio-card
-                .mdl-card__title.portfolio-card__title.portfolio-card__title-1
-                  h2.mdl-card__title-text.portfolio-card__title--bottom College project
-                .mdl-card__supporting-text.mdl-card--expand
-                  | This is my first college project.
-                  | The objective was to recreate a wix website in pure html and css.
-                  | Hosted on GitHub pages.
-                .mdl-card__actions.mdl-card--border.center-text
-                  a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href="https://weyts.xyz/Tomorrowland-Project")
-                    | Visit website
-                  a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href="https://github.com/ArnaudWeyts/Tomorrowland-Project")
-                    | View on github
-        .mdl-layout-spacer
-        footer.mdl-mini-footer.footer
-          .mdl-mini-footer__left-section
-            .mdl-logo Arnaud Weyts
-            ul.mdl-mini-footer__link-list
+              h4 College project
+              p
+                | This is my first college project.
+                | The objective was to recreate a wix website in pure html and css.
+                | Hosted on GitHub pages.
+                ul
+                  li
+                    a(href="https://weyts.xyz/Tomorrowland-Project")
+                      | Visit website
+                  li
+                    a(href="https://github.com/ArnaudWeyts/Tomorrowland-Project")
+                      | View on github
+        footer
+            .footer-logo Arnaud Weyts
+            ul.footer-links
               li
                 a(href='https://github.com/ArnaudWeyts/arnaudweyts.github.io/blob/master/LICENSE') License
         script(src="assets/js/main.min.js")

@@ -1,9 +1,14 @@
 
 @import 'iconfont';
 @import 'colors';
-@import '../../node_modules/material-design-lite/src/material-design-lite';
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100);
 
 // general styles
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
 .page-content {
 	margin: 0 2%;
 }
@@ -23,19 +28,52 @@
 	margin-top: 20px;
 }
 
-.header-title {
-	color: #FFF;
+.site-header {
+	background-color: $header-bg-color;
+	background-image: linear-gradient(150deg, $header-bg-color-secondary, $header-bg-color);
+	padding: 3rem 4rem;
+	text-align: center;
+
+	.site-header--title {
+		margin: 0 auto;
+
+		.site-header--logo {
+			color: #FFF;
+		}
+	}
 }
+
 .banner {
 	height: 350px;
-	display: inline-block;
 	width: 100%;
-	background-image: url("../img/banner.jpg");
-	background-size: cover;
-	background-position: center;
+}
+
+.container-card {
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.card {
+	display: block;
+	padding: 0 0.7rem;
+	background-color: #FFF;
+	border-radius: 2px;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 2px 5px rgba(0,0,0,0.23);
+
+	.card-title {
+		margin-top: 1rem;
+	}
+
+	.card-content {
+		margin-bottom: 1rem;
+	}
 }
 .welcome-card {
-	margin: 50px 16px;
+	width: 33%;
 }
 .contact, .skills {
 	padding: 20px;
