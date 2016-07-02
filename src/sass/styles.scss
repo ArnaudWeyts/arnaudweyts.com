@@ -105,10 +105,14 @@ body {
 	width: 150px;
 	display: inline-block;
 }
-.portfolio-card__title {
-	padding: 0;
-	color: #fff;
-	min-height: 200px;
+.portfolio {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	.card {
+		width: 33%;
+	}
 }
 @for $i from 1 through 3 {
 	.portfolio-card__title-#{$i} {
