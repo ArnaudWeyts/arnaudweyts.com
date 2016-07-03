@@ -91,7 +91,8 @@ body {
 }
 .contact {
 	color: #FFF;
-	background-color: unquote("rgb(#{$color-primary})");
+	background-color: $header-bg-color;
+	background-image: linear-gradient(150deg, $header-bg-color-secondary, $header-bg-color);
 }
 .contactlist {
 	margin: 100px 0;
