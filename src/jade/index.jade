@@ -12,166 +12,109 @@ html(lang="en")
     link(rel="stylesheet", href="assets/css/styles.min.css")
   body
       header.site-header
-        h1.site-header--title
-          a.no-linkstyle.site-header--logo(href="#") Arnaud Weyts
-        nav.site-header--nav
-          a.nav-link(href="https://blog.weyts.xyz")
+        h1.site-header__title
+          a.link.site-header__logo(href="#") Arnaud Weyts
+        nav.site-header__nav
+          a.link.nav-link(href="https://blog.weyts.xyz")
             | Blog
       div
-        .banner
-          .page-content.container-card
-            .card.welcome-card
-              h2.card-title Who's this guy?
-              p.card-content
-                | Hey you! I'm Arnaud Weyts, a 19 year old IT student in Ghent, Belgium.
-                | My main interests are Web developement (duh) &amp; space exploration.
-                | Feel free to look around this website and leave feedback.
         .page-content
           .skills.center-text
-            h3.title Skills
             .skill-group
               .skill
                 svg(viewbox='0 0 100 100')
                   circle(cx='50', cy='50', r='45', fill='none')
-                  path.animated.stroke(data-amount = '252' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
+                  path.svg-path(data-amount = '252' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
                   a 40 40 0 0 1 0 80\
                   a 40 40 0 0 1 0 -80')
-                  text#count(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') HTML
+                  text.svg-text(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') HTML
               .skill
                 svg(viewbox='0 0 100 100')
                   circle(cx='50', cy='50', r='45', fill='none')
-                  path.animated.stroke(data-amount = '230' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
+                  path.svg-path(data-amount = '230' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
                   a 40 40 0 0 1 0 80\
                   a 40 40 0 0 1 0 -80')
-                  text#count(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') CSS
+                  text.svg-text(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') CSS
               .skill
                 svg(viewbox='0 0 100 100')
                   circle(cx='50', cy='50', r='45', fill='none')
-                  path.animated.stroke(data-amount = '150' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
+                  path.svg-path(data-amount = '150' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
                   a 40 40 0 0 1 0 80\
                   a 40 40 0 0 1 0 -80')
-                  text#count(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') JS
+                  text.svg-text(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') JS
               .skill
                 svg(viewbox='0 0 100 100')
                   circle(cx='50', cy='50', r='45', fill='none')
-                  path.animated.stroke(data-amount = '230' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
+                  path.svg-path(data-amount = '230' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
                   a 40 40 0 0 1 0 80\
                   a 40 40 0 0 1 0 -80')
-                  text#count(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') OS X
+                  text.svg-text(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') OS X
               .skill
                 svg(viewbox='0 0 100 100')
                   circle(cx='50', cy='50', r='45', fill='none')
-                  path.animated.stroke(data-amount = '230' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
+                  path.svg-path(data-amount = '230' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
                   a 40 40 0 0 1 0 80\
                   a 40 40 0 0 1 0 -80')
-                  text#count(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') Linux
+                  text.svg-text(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') Linux
             .skill-group
               .skill
                 svg(viewbox='0 0 100 100')
                   circle(cx='50', cy='50', r='45', fill='none')
-                  path.animated.stroke(data-amount = '252' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
+                  path.svg-path(data-amount = '252' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
                   a 40 40 0 0 1 0 80\
                   a 40 40 0 0 1 0 -80')
-                  text#count(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') Dutch
+                  text.svg-text(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') Dutch
               .skill
                 svg(viewbox='0 0 100 100')
                   circle(cx='50', cy='50', r='45', fill='none')
-                  path.animated.stroke(data-amount = '252' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
+                  path.svg-path(data-amount = '252' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
                   a 40 40 0 0 1 0 80\
                   a 40 40 0 0 1 0 -80')
-                  text#count(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') English
+                  text.svg-text(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') English
               .skill
                 svg(viewbox='0 0 100 100')
                   circle(cx='50', cy='50', r='45', fill='none')
-                  path.animated.stroke(data-amount = '126' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
+                  path.svg-path(data-amount = '126' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
                   a 40 40 0 0 1 0 80\
                   a 40 40 0 0 1 0 -80')
-                  text#count(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') French
+                  text.svg-text(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') French
                .skill
                   svg(viewbox='0 0 100 100')
                     circle(cx='50', cy='50', r='45', fill='none')
-                    path.animated.stroke(data-amount = '126' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
+                    path.svg-path(data-amount = '126' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
                     a 40 40 0 0 1 0 80\
                     a 40 40 0 0 1 0 -80')
-                    text#count(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') German
+                    text.svg-text(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') German
                 .skill
                   svg(viewbox='0 0 100 100')
                     circle(cx='50', cy='50', r='45', fill='none')
-                    path.animated.stroke(data-amount = '50' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
+                    path.svg-path(data-amount = '50' stroke-linecap='round', stroke-width='3', stroke='#009688', fill='none', stroke-dasharray='1000', stroke-dashoffset='1000' d='M50 10\
                     a 40 40 0 0 1 0 80\
                     a 40 40 0 0 1 0 -80')
-                    text#count(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') Italian
+                    text.svg-text(x='50', y='50', text-anchor='middle', dy='7', fill='#009688', font-size='15') Italian
           .contact.center-text
             h3.title Contact
             ul.contactlist
               li.contactitem
-                a.contact-link.no-linkstyle(href="https://github.com/arnaudweyts")
+                a.link.contact-link(href="https://github.com/arnaudweyts")
                   i.icon-github.align-icon
                   | Github
               li.contactitem
-                a.contact-link.no-linkstyle(href="https://codepen.io/ArnaudWeyts")
+                a.link.contact-link(href="https://codepen.io/ArnaudWeyts")
                   i.icon-codepen.align-icon(area-hidden="true")
                   | Codepen
               li.contactitem
-                a.contact-link.no-linkstyle(href="https://linkedin.com/in/arnaudweyts")
+                a.link.contact-link(href="https://linkedin.com/in/arnaudweyts")
                   i.icon-linkedin.align-icon(area-hidden="true")
                   | Linkedin
               li.contactitem
-                a.contact-link.no-linkstyle(href="https://twitter.com/hardyparter")
+                a.link.contact-link(href="https://twitter.com/ArnaudWeyts")
                   i.icon-twitter.align-icon(area-hidden="true")
                   | Twitter
               li.contactitem
-                a.contact-link.no-linkstyle(href="mailto:hello@weyts.xyz")
+                a.link.contact-link(href="mailto:hello@weyts.xyz")
                   i.icon-envelope.align-icon(area-hidden="true")
                   | Mail
-          span#portfolio
-          .portfolio
-            h3.center-text.title Portfolio
-              .card
-                h4.card-title College project
-                p.card-content
-                  | A Laravel project, to create a website
-                  | of economic, social or commercial value. Created with Material Design Lite.
-                  | Warning: this app is hosted in a test environment and might take a while to load the
-                  | the first time.
-                  ul
-                    li
-                      a(href="http://floating-shelf-62197.herokuapp.com")
-                        | Visit website
-                    li
-                      a(href="https://github.com/ArnaudWeyts/showtime")
-                        | View on github
-              .card
-                h4.card-title College project
-                p.card-content
-                  | This is one of my first college projects.
-                  | The objective was to recreate a wix website in pure html and css.
-                  | Hosted on GitHub pages.
-                  ul
-                    li
-                      a(href="https://weyts.xyz/Webtechnieken-Project-2")
-                        | Visit website
-                    li
-                      a(href="https://github.com/ArnaudWeyts/Webtechnieken-Project-2")
-                        | View on github
-              .card
-                h4.card-title College project
-                p.card-content
-                  | This is my first college project.
-                  | The objective was to recreate a wix website in pure html and css.
-                  | Hosted on GitHub pages.
-                  ul
-                    li
-                      a(href="https://weyts.xyz/Tomorrowland-Project")
-                        | Visit website
-                    li
-                      a(href="https://github.com/ArnaudWeyts/Tomorrowland-Project")
-                        | View on github
-        footer
-            .footer-logo Arnaud Weyts
-            ul.footer-links
-              li
-                a(href='https://github.com/ArnaudWeyts/arnaudweyts.github.io/blob/master/LICENSE') License
         script(src="assets/js/main.min.js")
 
 

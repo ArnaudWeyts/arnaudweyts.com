@@ -21,8 +21,9 @@ body {
 .center-text {
 	text-align: center;
 }
-.no-linkstyle {
+.link {
 	text-decoration: none;
+	color: $link-color-light;
 }
 .footer {
 	margin-top: 20px;
@@ -34,17 +35,21 @@ body {
 	padding: 3rem 4rem;
 	text-align: center;
 
-	.site-header--title {
+	.site-header__title {
 		margin: 0 auto;
 
-		.site-header--logo {
+		.site-header__logo {
 			color: #FFF;
 		}
+	}
+
+	.site-header__nav {
+		margin: 1rem;
 	}
 }
 
 .banner {
-	height: 350px;
+	height: 20rem;
 	width: 100%;
 }
 
@@ -59,32 +64,34 @@ body {
 
 .card {
 	display: block;
-	padding: 0 0.7rem;
+	padding: 0.7rem 0.7rem;
 	background-color: #FFF;
 	border-radius: 2px;
 	box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 2px 5px rgba(0,0,0,0.23);
 
 	.card-title {
-		margin-top: 1rem;
+		margin: 0;
 	}
 
-	.card-content {
-		margin-bottom: 1rem;
+	.card-actions {
+
 	}
+
+	.card-actions__btn {
+		min-width: 50%;
+	}
+
 }
 .welcome-card {
 	width: 33%;
 }
 .contact, .skills {
 	padding: 20px;
-	margin: 20px -3%;
+	margin: 20px -3% 0 -3% ;
 }
 .contact {
 	color: #FFF;
 	background-color: unquote("rgb(#{$color-primary})");
-}
-.title {
-	margin: 40px;
 }
 .contactlist {
 	margin: 100px 0;
@@ -99,7 +106,7 @@ body {
 	color: #FFF;
 }
 .skills {
-	margin: 0 auto;
+	margin: 1rem auto;
 }
 .skill {
 	width: 150px;
@@ -109,9 +116,19 @@ body {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+
+	.title {
+		width: 100%;
+	}
 
 	.card {
 		width: 33%;
+		flex-grow: 1;
+		flex-shrink: 0;
+    	flex-basis: 200px;
 	}
 }
 @for $i from 1 through 3 {
@@ -127,18 +144,6 @@ body {
 	background: linear-gradient(to top, rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0));
 	width: 100%;
 }
-
-/*@keyframes stroke {
-  	to {
-    	stroke-dashoffset: 755;
-  	}
-}
-.stroke {
-	stroke-dasharray: 1000;
-  	stroke-dashoffset: 1000;
-  	/*animation: stroke 3s linear forwards;
-  	animation-fill-mode: both;
-}*/
 
 
 // media queries
