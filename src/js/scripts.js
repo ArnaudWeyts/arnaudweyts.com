@@ -7,13 +7,16 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-64481180-1', 'auto');
 ga('send', 'pageview');
 
-require("material-design-lite");
 window.onload = function() {
   "use strict";
 
   // animations on skills
-  var elements = document.getElementsByClassName("stroke");
+  var svgPathElements = document.getElementsByClassName("svg-path");
+  var svgTextElements = document.getElementsByClassName("svg-text");
   var intervals = [];
+
+  // array of predifined colors
+  var colors = ["#CACAAA", "#EEC584", "#C8AB83", "#55868C", "#7F636E"];
 
   function clear(i) {
     return function(){
@@ -28,8 +31,11 @@ window.onload = function() {
   function stroke(elem) {
     elem.setAttribute("stroke-dashoffset", parseInt(elem.getAttribute("stroke-dashoffset"))-3);
   }
-  for (var i = elements.length - 1; i >= 0; i--) {
-    var timer = Math.round(15 / parseInt(elements[i].getAttribute("data-amount")) * 252);
+  for (var i = svgPathElements.length - 1; i >= 0; i--) {
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    svgPathElements[i].setAttribute("stroke", randomColor);
+    svgTextElements[i].setAttribute("fill", randomColor);
+    var timer = Math.round(15 / parseInt(svgPathElements[i].getAttribute("data-amount")) * 252);
     intervals[i] = setInterval(function(elem, interv) {
       if(parseInt(elem.getAttribute("stroke-dashoffset")) <= 1000 - parseInt(elem.getAttribute("data-amount"))) {
         clear(interv);
@@ -37,7 +43,7 @@ window.onload = function() {
       else {
         stroke(elem);
       }
-    }, timer, elements[i], i);
+    }, timer, svgPathElements[i], i);
   }
   // clear all intervals anyways, because apparently they keep running on forever
   // btw this is really shitty
