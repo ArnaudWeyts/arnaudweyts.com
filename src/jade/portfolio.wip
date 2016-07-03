@@ -1,0 +1,36 @@
+.portfolio
+            h3.center-text.title Portfolio
+            .card
+              h4.card-title College project
+              p.card-content
+                | A Laravel project, to create a website
+                | of economic, social or commercial value. Created with Material Design Lite.
+                | Warning: this app is hosted in a test environment and might take a while to load the
+                | the first time.
+              .card-actions
+                a.card-actions__btn(href="http://floating-shelf-62197.herokuapp.com")
+                    | Visit website
+                a.card-actions__btn(href="https://github.com/ArnaudWeyts/showtime")
+                    | View on github
+            .card
+              h4.card-title College project
+              p.card-content
+                | This is one of my first college projects.
+                | The objective was to recreate a wix website in pure html and css.
+                | Hosted on GitHub pages.
+              .card-actions
+                a.card-actions__btn(href="https://weyts.xyz/Webtechnieken-Project-2")
+                  | Visit website
+                a.card-actions__btn(href="https://github.com/ArnaudWeyts/Webtechnieken-Project-2")
+                  | View on github
+            .card
+              h4.card-title College project
+              p.card-content
+                | This is my first college project.
+                | The objective was to recreate a wix website in pure html and css.
+                | Hosted on GitHub pages.
+              .card-actions
+                a.card-actions__btn(href="https://weyts.xyz/Tomorrowland-Project")
+                  | Visit website
+                a.card-actions__btn(href="https://github.com/ArnaudWeyts/Tomorrowland-Project")
+                  | View on github
