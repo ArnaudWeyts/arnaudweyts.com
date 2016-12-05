@@ -109,8 +109,8 @@ gulp.task("copy", function () {
     .pipe(gulp.dest(DEST + "/assets/fonts"))
     gulp.src(SRC + "google*.html")
     .pipe(gulp.dest(DEST))
-    //gulp.src(SRC + "/favicons/*")
-    //.pipe(gulp.dest(DEST));
+    gulp.src(SRC + "/favicons/*")
+    .pipe(gulp.dest(DEST + "/assets/favicons"))
 });
 
 gulp.task("watch", function () {
