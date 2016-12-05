@@ -4,6 +4,6 @@
 ## Build
 This opens up a browser-sync tab and the website should be up and running
 ```shell
-$ npm install
+$ yarn
 $ gulp compile && gulp browser-sync
 ```
