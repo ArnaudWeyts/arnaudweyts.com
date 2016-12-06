@@ -49,7 +49,7 @@ git config user.name $GH_USERNAME
 git config user.email $GH_USERMAIL
 
 # Add new files
-git add .
+git add -A
 
 # If there are no changes to the compiled _site (e.g. this is a README update) then just bail.
 if [[ -z `git diff --cached --exit-code` ]]; then
