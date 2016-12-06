@@ -7,7 +7,7 @@ source = require("vinyl-source-stream"),
 buffer = require("vinyl-buffer"),
 sourcemaps = require("gulp-sourcemaps"),
 gutil = require("gulp-util"),
-jade = require("gulp-jade"),
+htmlmin = require("gulp-htmlmin"),
 sass = require("gulp-sass"),
 autoprefixer = require("gulp-autoprefixer"),
 purify = require("gulp-purifycss"),
@@ -21,14 +21,10 @@ browserSync = require("browser-sync").create();
 var SRC = "./src";
 var DEST = "./_site";
 
-gulp.task("jade", function() {
-    var YOUR_LOCALS = {};
-
-    gulp.src(SRC + "/jade/*.jade")
-    .pipe(jade({
-        locals: YOUR_LOCALS
-    }))
-    .pipe(gulp.dest(DEST))
+gulp.task("html", function() {
+    return gulp.src(SRC + "/html/*.html")
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(DEST));
 });
 
 gulp.task("sass", function () {
@@ -114,11 +110,11 @@ gulp.task("copy", function () {
 });
 
 gulp.task("watch", function () {
-    gulp.watch(SRC + "/jade/**/*.jade", ["jade"]).on("change", browserSync.reload);
+    gulp.watch(SRC + "/html/**/*.html", ["html"]).on("change", browserSync.reload);
     gulp.watch(SRC + "/sass/**/*.scss", ["sass"]).on("change", browserSync.reload);
     gulp.watch(SRC + "/js/**/*.js", ["scripts"]).on("change", browserSync.reload);
 });
 
-gulp.task("default", ["watch", "jade", "copy", "scripts", "sass", "browser-sync"]);
-gulp.task("compile", ["jade", "copy", "scripts", "sass", "images"]);
+gulp.task("default", ["watch", "html", "copy", "scripts", "sass", "browser-sync"]);
+gulp.task("compile", ["html", "copy", "scripts", "sass", "images"]);
 
