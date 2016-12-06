@@ -116,5 +116,5 @@ gulp.task("watch", function () {
 });
 
 gulp.task("default", ["watch", "html", "copy", "scripts", "sass", "browser-sync"]);
-gulp.task("compile", ["html", "copy", "scripts", "sass", "images"]);
+gulp.task("compile", ["html", "copy", "scripts", "sass"]);
 
