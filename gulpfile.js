@@ -103,7 +103,7 @@ gulp.task("browser-sync", () => {
 gulp.task("copy", function () {
     gulp.src(SRC + "/fonts/*")
     .pipe(gulp.dest(DEST + "/assets/fonts"))
-    gulp.src(SRC + "google*.html")
+    gulp.src(SRC + "/html/google*.html")
     .pipe(gulp.dest(DEST))
     gulp.src(SRC + "/favicons/*")
     .pipe(gulp.dest(DEST + "/assets/favicons"))
