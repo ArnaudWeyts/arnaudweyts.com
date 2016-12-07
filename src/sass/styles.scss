@@ -13,11 +13,14 @@ html {
 html, body {
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
-	font-weight: 200;
-	height: 100%;
-   width: 100%;
+	font-weight: 300;
 	background-color: $color-primary;
-	text-align: center;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+.site-content {
+	flex: 1;
 }
 .link {
 	text-decoration: none;
@@ -36,12 +39,14 @@ html, body {
 // actual page styles
 .site-header {
 	margin-bottom: 6rem;
+	text-align: center;
 }
 .site-header__title {
 	font-size: 4rem;
 }
 .contact {
 	color: #FFF;
+	text-align: center;
 }
 .title {
 	font-size: 3rem;
