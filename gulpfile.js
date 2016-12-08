@@ -64,32 +64,6 @@ gulp.task("scripts", function() {
     .pipe(gulp.dest(DEST + "/assets/js/"));
 });
 
-gulp.task("favicons", function () {
-    gulp.src(SRC + "/img/logo.png").pipe(favicons({
-        appName: "Arnaud Weyts",
-        appDescription: "This is my personal website",
-        developerName: "Arnaud Weyts",
-        developerURL: "http://weyts.xyz/",
-        background: "#020307",
-        path: DEST + "/favicons/",
-        url: "http://weyts.xyz/",
-        display: "standalone",
-        orientation: "portrait",
-        version: 1.0,
-        logging: false,
-        online: false,
-        html: DEST + "index.html",
-        pipeHTML: true,
-        replace: true
-    })).pipe(gulp.dest("./"));
-});
-
-gulp.task("images", function() {
-    return gulp.src(SRC + "/img/**/*", {base: SRC + "/img"})
-    .pipe(imagemin())
-    .pipe(gulp.dest(DEST + "/assets/img/"))
-});
-
 gulp.task("browser-sync", () => {
     browserSync.init({
         server: {
