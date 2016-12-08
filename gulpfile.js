@@ -12,9 +12,6 @@ sass = require("gulp-sass"),
 autoprefixer = require("gulp-autoprefixer"),
 purify = require("gulp-purifycss"),
 cssnano = require("gulp-cssnano"),
-imagemin = require("gulp-imagemin"),
-favicons = require("gulp-favicons"),
-concat = require("gulp-concat"),
 uglify = require("gulp-uglify"),
 browserSync = require("browser-sync").create();
 
