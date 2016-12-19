@@ -25,7 +25,7 @@ gulp.task("html", function() {
 });
 
 gulp.task("sass", function () {
-    return gulp.src(SRC + "/sass/**/styles.scss")
+    return gulp.src(SRC + "/sass/styles.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(autoprefixer({
         browsers: [">1%"],
@@ -37,7 +37,7 @@ gulp.task("sass", function () {
       suffix: '.min'
     }))
     .pipe(gulp.dest(DEST + "/assets/css/"))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 });
 
 gulp.task("scripts", function() {
@@ -82,7 +82,7 @@ gulp.task("copy", function () {
 
 gulp.task("watch", function () {
     gulp.watch(SRC + "/html/**/*.html", ["html"]).on("change", browserSync.reload);
-    gulp.watch(SRC + "/sass/**/*.scss", ["sass"]).on("change", browserSync.reload);
+    gulp.watch(SRC + "/sass/**/*.scss", ["sass"]);
     gulp.watch(SRC + "/js/**/*.js", ["scripts"]).on("change", browserSync.reload);
 });
 
