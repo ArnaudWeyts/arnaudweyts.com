@@ -5,6 +5,7 @@
   "main": "index.html",
   "dependencies": {
     "font-awesome": "^4.6.3",
+    "graceful-fs": "^4.1.11",
     "gulp-htmlmin": "^3.0.0",
     "material-design-lite": "^1.1.3"
   },
