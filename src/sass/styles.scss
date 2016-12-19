@@ -44,6 +44,12 @@ html, body {
 .site-header__title {
 	font-size: 4rem;
 }
+.content {
+    color: #FFF;
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem;
+}
 .contact {
 	color: #FFF;
 	text-align: center;
@@ -65,8 +71,8 @@ html, body {
 }
 
 // mediaqueries
-@media(max-width: 70rem) {
-	.contactlist {
-		list-style: none;
+@media(max-width: 30rem) {
+	.contactitem {
+		display: block;
 	}
 }
