@@ -20,7 +20,7 @@ var DEST = "./_site";
 
 gulp.task("html", function() {
     return gulp.src(SRC + "/html/*.html")
-    .pipe(htmlmin({collapseWhitespace: true}))
+    //.pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(DEST));
 });
 
@@ -31,8 +31,8 @@ gulp.task("sass", function () {
         browsers: [">1%"],
         cascade: false
     }))
-    .pipe(purify([DEST + "/assets/js/**/*.js", DEST + "/*.html"]))
-    .pipe(cssnano())
+    //.pipe(purify([DEST + "/assets/js/**/*.js", DEST + "/*.html"]))
+    //.pipe(cssnano())
     .pipe(rename({
       suffix: '.min'
     }))
