@@ -10,7 +10,6 @@ gutil = require("gulp-util"),
 htmlmin = require("gulp-htmlmin"),
 sass = require("gulp-sass"),
 autoprefixer = require("gulp-autoprefixer"),
-purify = require("gulp-purifycss"),
 cssnano = require("gulp-cssnano"),
 uglify = require("gulp-uglify"),
 browserSync = require("browser-sync").create();
@@ -31,8 +30,7 @@ gulp.task("sass", function () {
         browsers: [">1%"],
         cascade: false
     }))
-    .pipe(purify([DEST + "/assets/js/**/*.js", DEST + "/*.html"]))
-    //.pipe(cssnano())
+    .pipe(cssnano())
     .pipe(rename({
       suffix: '.min'
     }))
