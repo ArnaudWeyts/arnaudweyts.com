@@ -31,7 +31,7 @@ gulp.task("sass", function () {
         browsers: [">1%"],
         cascade: false
     }))
-    //.pipe(purify([DEST + "/assets/js/**/*.js", DEST + "/*.html"]))
+    .pipe(purify([DEST + "/assets/js/**/*.js", DEST + "/*.html"]))
     //.pipe(cssnano())
     .pipe(rename({
       suffix: '.min'
