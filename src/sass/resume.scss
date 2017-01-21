@@ -22,8 +22,26 @@ padding: 20px;
   padding: 20px 0;
 }
 
-.skills {
-  clear: both;
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image {
+  background-image: url('../img/me.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  min-width: 200px;
+  border-radius: 100%;
+  float: left;
+  margin-right: 20px;
+}
+
+.profile-text {
+  min-width: 50%;
+  flex-wrap: wrap;
 }
 
 .section:not(:last-of-type) {
@@ -85,6 +103,10 @@ padding: 20px;
 
   .container {
     padding: 30px;
+  }
+
+  .profile-container {
+    flex-direction: column;
   }
 
   .timeline-item {
