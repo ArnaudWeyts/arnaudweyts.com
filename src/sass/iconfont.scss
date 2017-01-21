@@ -1,24 +1,17 @@
-//fonts
-$icon-font: icomoon;
-
-//urls
-$url_0: url(../fonts/icomoon.eot?q2r7a5);
-$url_1: url(../fonts/icomoon.eot?q2r7a5#iefix);
-$url_2: url(../fonts/icomoon.ttf?q2r7a5);
-$url_3: url(..fonts/icomoon.woff?q2r7a5);
-$url_4: url(../fonts/icomoon.svg?q2r7a5#icomoon);
-
 @font-face {
-    font-family: $icon-font;
-    src: $url_0;
-    src: $url_1 format('embedded-opentype'), $url_2 format('truetype'), $url_3 format('woff'), $url_4 format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?eipri8');
+  src:  url('../fonts/icomoon.eot?eipri8#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?eipri8') format('truetype'),
+    url('../fonts/icomoon.woff?eipri8') format('woff'),
+    url('../fonts/icomoon.svg?eipri8#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
-  font-family: $icon-font;
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -26,22 +19,35 @@ $url_4: url(../fonts/icomoon.svg?q2r7a5#icomoon);
   text-transform: none;
   line-height: 1;
 
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-envelope:before {
-    content: "\e900";
+  content: "\e900";
+}
+.icon-phone:before {
+  content: "\e0cd";
+}
+.icon-directions_car:before {
+  content: "\e531";
+}
+.icon-home:before {
+  content: "\e88a";
+}
+.icon-room:before {
+  content: "\e8b4";
 }
 .icon-twitter:before {
-    content: "\ea96";
+  content: "\ea96";
 }
 .icon-github:before {
-    content: "\eab0";
+  content: "\eab0";
 }
 .icon-linkedin:before {
-    content: "\eac9";
+  content: "\eac9";
 }
 .icon-codepen:before {
-    content: "\eae8";
+  content: "\eae8";
 }
