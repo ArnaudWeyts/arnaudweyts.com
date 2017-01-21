@@ -16,7 +16,7 @@ GH_USERMAIL="bot@weyts.xyz"
 function doCompile {
   gulp compile
   # this is a CNAME record for the subdomain, you might not need this. So comment it out
-  echo "weyts.xyz" > _site/CNAME
+  echo "weyts.xyz" > $DIRECTORY/CNAME
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
@@ -30,7 +30,7 @@ fi
 REPO=`git config remote.origin.url`
 SHA=`git rev-parse --verify HEAD`
 
-# Clone the existing gh-pages for this repo into _site/
+# Clone the existing gh-pages for this repo into ./build
 # Create a new empty branch if gh-pages doesn't exist yet (should only happen on first deploy)
 git clone $REPO $DIRECTORY
 cd $DIRECTORY
@@ -51,7 +51,7 @@ git config user.email $GH_USERMAIL
 # Add new files
 git add -A
 
-# If there are no changes to the compiled _site (e.g. this is a README update) then just bail.
+# If there are no changes to the compiled build (e.g. this is a README update) then just bail.
 if [[ -z `git diff --cached --exit-code` ]]; then
     echo "No changes to the output on this push; exiting."
     exit 0
