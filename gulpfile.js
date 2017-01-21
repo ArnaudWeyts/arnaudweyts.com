@@ -15,11 +15,11 @@ uglify = require("gulp-uglify"),
 browserSync = require("browser-sync").create();
 
 var SRC = "./src";
-var DEST = "./_site";
+var DEST = "./build";
 
 gulp.task("html", function() {
-    return gulp.src(SRC + "/html/*.html")
-    //.pipe(htmlmin({collapseWhitespace: true}))
+    return gulp.src(SRC + "/html/**/*.html")
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(DEST));
 });
 
@@ -71,11 +71,11 @@ gulp.task("browser-sync", () => {
 
 gulp.task("copy", function () {
     gulp.src(SRC + "/fonts/*")
-    .pipe(gulp.dest(DEST + "/assets/fonts"))
+    .pipe(gulp.dest(DEST + "/assets/fonts"));
     gulp.src(SRC + "/html/google*.html")
-    .pipe(gulp.dest(DEST))
+    .pipe(gulp.dest(DEST));
     gulp.src(SRC + "/favicons/*")
-    .pipe(gulp.dest(DEST + "/assets/favicons"))
+    .pipe(gulp.dest(DEST + "/assets/favicons"));
 });
 
 gulp.task("watch", function () {

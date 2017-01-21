@@ -7,7 +7,7 @@
 # set your build information here, the script will take care of anything else
 SOURCE_BRANCH="develop"
 TARGET_BRANCH="master"
-DIRECTORY="_site"
+DIRECTORY="build"
 GH_REF="github.com/ArnaudWeyts/arnaudweyts.github.io"
 GH_USERNAME="Block-Bot"
 GH_USERMAIL="bot@weyts.xyz"
