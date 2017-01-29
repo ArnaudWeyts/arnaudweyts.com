@@ -1,9 +1,11 @@
 // body styling, see main styles file
-font-family: 'Roboto', sans-serif;
-margin: 0;
-background-color: #f9f9fc;
-color: #333;
-padding: 20px;
+& {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #f9f9fc;
+  color: #333;
+  padding: 20px;
+}
 
 .container {
   max-width: 960px;
@@ -42,6 +44,25 @@ padding: 20px;
 .profile-text {
   min-width: 50%;
   flex-wrap: wrap;
+}
+
+.skills-item {
+  display: flex;
+  align-items: center;
+
+  h3 {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.skills-item_title {
+  flex-grow: 1;
+}
+
+.logo {
+  font-size: 30px;
+  margin: 10px;
 }
 
 .section:not(:last-of-type) {
@@ -85,7 +106,6 @@ padding: 20px;
 }
 
 .timeline-location {
-  display: inline-block;
   float: right;
 }
 
