@@ -49,6 +49,14 @@
   .site-header__title {
   	font-size: 40px;
   }
+
+  .site-header__nav {
+    a {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+
   .content {
       color: #FFF;
       font-size: 20px;
