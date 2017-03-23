@@ -2,9 +2,11 @@
 @import 'iconfont';
 @import 'colors';
 // give page class so we don't have to meme ourself with identifiers
-.404 {
+
+._404 {
   @import '404';
 }
+
 .resume {
   @import 'resume';
 }
