@@ -1,6 +1,15 @@
-.container {
+& {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: $color-primary;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  flex-direction: column;
+
+  p {
+    color: #FFF;
+    font-size: 30px;
+  }
 }

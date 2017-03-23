@@ -14,6 +14,20 @@
 //font
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100);
 
+.link {
+  text-decoration: none;
+  color: $link-color-light;
+}
+.material-btn {
+  font-size: 20px;
+  color: $color-primary;
+    border: 1px solid darken(#eaeaea, 5%);
+    border-radius: 3px;
+    box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.4);
+    background-color: #FFF;
+    padding: 10px 20px;
+}
+
 // landing page styling
 .index {
   margin: 0;
@@ -26,19 +40,6 @@
 
   .site-content {
   	flex: 1;
-  }
-  .link {
-  	text-decoration: none;
-  	color: $link-color-light;
-  }
-  .material-btn {
-  	font-size: 20px;
-  	color: $color-primary;
-      border: 1px solid darken(#eaeaea, 5%);
-      border-radius: 3px;
-    	box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.4);
-    	background-color: #FFF;
-    	padding: 10px 20px;
   }
 
   .site-header {
