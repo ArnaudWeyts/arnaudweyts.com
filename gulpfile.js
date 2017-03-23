@@ -78,6 +78,8 @@ gulp.task('copy', () => {
     .pipe(gulp.dest(DEST));
     gulp.src(SRC + '/favicons/*')
     .pipe(gulp.dest(DEST + '/assets/favicons'));
+    gulp.src(SRC + '/resume.pdf')
+    .pipe(gulp.dest(DEST + '/assets'));
 });
 
 gulp.task('img', () => {
@@ -94,4 +96,3 @@ gulp.task('watch', () => {
 
 gulp.task('default', ['watch', 'img', 'copy', 'html', 'scripts', 'sass', 'browser-sync']);
 gulp.task('compile', ['img', 'copy', 'html', 'scripts', 'sass']);
-

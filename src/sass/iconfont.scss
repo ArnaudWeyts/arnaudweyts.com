@@ -24,6 +24,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-download:before {
+  content: "\e902";
+}
+
 .icon-javascript:before {
   content: "\e901";
 }
