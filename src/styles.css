@@ -42,6 +42,10 @@ html {
   font-style: normal;
 }
 
+.intro .title {
+  font-size: 1em;
+}
+
 .links {
   max-width: 40%;
   list-style: none;
