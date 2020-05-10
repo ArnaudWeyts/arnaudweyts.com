@@ -16,6 +16,7 @@ html {
 @font-face {
   font-family: "Roboto Slab";
   src: url("./assets/fonts/RobotoSlab/RobotoSlab-VariableFont_wght.ttf");
+  font-display: swap;
 }
 
 .body {
