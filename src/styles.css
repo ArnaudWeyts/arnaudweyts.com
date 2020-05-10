@@ -1,0 +1,137 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 62.5%;
+}
+
+:root {
+  --color-rgb-primary: 0, 188, 212;
+  --color-rgb-primary-light: 98, 239, 255;
+  --color-rgb-primary-dark: 0, 139, 163;
+  --color-rgb-white: 255, 255, 255;
+  --color-rgb-black: 0, 0, 0;
+  --color-rgb-black-light: 50, 50, 50;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("./assets/fonts/RobotoSlab/RobotoSlab-VariableFont_wght.ttf");
+}
+
+.body {
+  min-height: 100%;
+  min-width: 100%;
+  margin: 0;
+  color: rgb(var(--color-rgb-black-light));
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5em;
+  box-sizing: border-box;
+  font-family: "Roboto Slab";
+}
+
+.intro {
+  max-width: 60%;
+  font-size: 1.6em;
+}
+
+.intro .name {
+  font-size: 3em;
+  font-style: normal;
+}
+
+.links {
+  max-width: 40%;
+  list-style: none;
+  padding: 1em;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (prefers-color-scheme: dark) {
+  .body {
+    color: rgb(var(--color-rgb-white));
+    background: rgb(var(--color-rgb-black-light));
+  }
+}
+
+@media (max-width: 1060px) {
+  .body {
+    flex-direction: column;
+  }
+
+  .intro {
+    max-width: initial;
+  }
+
+  .links {
+    max-width: initial;
+  }
+}
+
+@media (max-width: 600px) {
+  .intro .name {
+    font-size: 2em;
+  }
+
+  .links {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
+/** Components */
+
+.link {
+  color: rgb(var(--color-rgb-primary));
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.button-link {
+  text-transform: uppercase;
+  color: rgb(var(--color-rgb-black));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.6em;
+  padding: 1em;
+  border-radius: 4px;
+  background-color: rgb(var(--color-rgb-primary));
+  height: 0.5em;
+  transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.button-link:hover {
+  background-color: rgba(var(--color-rgb-primary), 0.5);
+}
+
+@media (prefers-color-scheme: light) {
+  .link {
+    color: rgb(var(--color-rgb-primary-dark));
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .button-link {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .button-link::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(var(--color-rgb-white));
+    z-index: -1;
+  }
+}
