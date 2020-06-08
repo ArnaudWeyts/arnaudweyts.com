@@ -121,13 +121,11 @@ html {
   background-color: rgba(var(--color-rgb-primary), 0.5);
 }
 
-@media (prefers-color-scheme: light) {
-  .link {
-    color: rgb(var(--color-rgb-primary-dark));
-  }
-}
-
 @media (prefers-color-scheme: dark) {
+  .link {
+    color: rgb(var(--color-rgb-primary));
+  }
+
   .button-link {
     overflow: hidden;
     position: relative;
