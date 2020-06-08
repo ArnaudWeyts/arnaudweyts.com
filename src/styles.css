@@ -7,7 +7,7 @@ html {
 :root {
   --color-rgb-primary: 0, 188, 212;
   --color-rgb-primary-light: 98, 239, 255;
-  --color-rgb-primary-dark: 0, 139, 163;
+  --color-rgb-primary-dark: 0, 104, 122;
   --color-rgb-white: 255, 255, 255;
   --color-rgb-black: 0, 0, 0;
   --color-rgb-black-light: 50, 50, 50;
@@ -91,7 +91,7 @@ html {
 /** Components */
 
 .link {
-  color: rgb(var(--color-rgb-primary));
+  color: rgb(var(--color-rgb-primary-dark));
   text-decoration: none;
 }
 
