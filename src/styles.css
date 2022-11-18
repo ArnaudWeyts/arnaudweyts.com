@@ -5,7 +5,7 @@ html {
 }
 
 :root {
-  --color-rgb-primary: 0, 188, 212;
+  --color-rgb-primary: 123, 184, 120;
   --color-rgb-primary-light: 98, 239, 255;
   --color-rgb-primary-dark: 0, 104, 122;
   --color-rgb-white: 255, 255, 255;
@@ -15,7 +15,7 @@ html {
 
 @font-face {
   font-family: "Roboto Slab";
-  src: url("./assets/fonts/RobotoSlab/RobotoSlab-VariableFont_wght.ttf");
+  src: url("./assets/fonts/Sono-VariableFont_MONO,wght.ttf");
   font-display: swap;
 }
 
