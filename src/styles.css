@@ -91,7 +91,7 @@ html {
 /** Components */
 
 .link {
-  color: rgb(var(--color-rgb-primary-dark));
+  color: rgb(var(--color-rgb-primary));
   text-decoration: none;
 }
 
@@ -100,7 +100,6 @@ html {
 }
 
 .button-link {
-  text-transform: uppercase;
   color: rgb(var(--color-rgb-black));
   display: flex;
   align-items: center;
@@ -113,8 +112,7 @@ html {
   height: 0.5em;
   line-height: 0.5em;
   transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 }
 
 .button-link:hover {
@@ -122,10 +120,6 @@ html {
 }
 
 @media (prefers-color-scheme: dark) {
-  .link {
-    color: rgb(var(--color-rgb-primary));
-  }
-
   .button-link {
     overflow: hidden;
     position: relative;
